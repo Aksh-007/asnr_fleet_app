@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@chakra-ui/react";
-import { FormControl, FormLabel, Input, Select} from "@chakra-ui/react";
+import { FormControl, FormLabel, Input, Select } from "@chakra-ui/react";
 import "./register.scss";
 import { Link } from "react-router-dom";
 import HomeImag from "../components/homeimage/HomeImg";
@@ -31,10 +31,11 @@ const Register = () => {
 
   return (
     <div className="app_register">
+      <HomeImag />
       <div className="app_register_form">
-        <div className="app_register_form2">
-          <h1>Sing Up</h1>
-          <p>create an account to start car booking</p>
+        <div className="app_register_form2" style={{ width: "70%" }}>
+          <h1>Sign Up</h1>
+          <p>Create an account to start car booking</p>
 
           <FormControl>
             <form>
@@ -91,28 +92,27 @@ const Register = () => {
                 autoCapitalize="on"
               />
 
-<FormLabel>Select your role</FormLabel>     
-<Select placeholder='Select option'>
-  <option value='option1'>User</option>
-  <option value='option2'>Vendor</option>
-  <option value='option3'>Driver</option>
-</Select>
+              <FormLabel>Select your role</FormLabel>
+              <Select placeholder="Select option">
+                <option value="option1">User</option>
+                <option value="option2">Vendor</option>
+                <option value="option3">Driver</option>
+              </Select>
             </form>
           </FormControl>
-
-          <Button type="submit" colorScheme="blue" onClick={submitHandler}>
-            Submit
-          </Button>
+          <div className="button">
+            <Button type="submit" colorScheme="blue" onClick={submitHandler}>
+              Submit
+            </Button>
+          </div>
           <p>
-            Sing up already? please{" "}
+            Sign up already? please
             <span>
-              {" "}
-              <Link to="/">Sing in</Link>
+              <Link to="/">Sign in</Link>
             </span>
           </p>
         </div>
       </div>
-      <HomeImag />
     </div>
   );
 };

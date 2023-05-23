@@ -32,7 +32,9 @@
         padding: 5px;
       }
       p {
+        text-align: center;
         padding: 10px;
+        font-size: 1.3rem;
         span{
           color: green;
         }
@@ -46,7 +48,9 @@
     height: 100vh;
   }
   Button{
+    
     margin-top: 15px;
+
   }
   
 }
