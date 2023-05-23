@@ -72,10 +72,10 @@ const SignIn = () => {
 
   return (
     <div className="app_register">
-      <div className="app_register_form">
-        <div className="app_register_form2">
-          <h1>Sing In</h1>
-
+       <HomeImag />
+      <div className="app_register_form" >
+        <div className="app_register_form2 " style={{width:'50%', height:'55vh'}}>
+          <h1>Sign In</h1>  
           <FormControl>
             <form>
               <FormLabel>Email</FormLabel>
@@ -108,14 +108,15 @@ const SignIn = () => {
             Submit
           </Button>
           <p>
-            Don't have an account? Please
+            Don&apos;t have an account?<br /> Please
+            
             <span>
-              <Link to="/signup">Sing Up</Link>
+              <Link to="/signup"> SignUp</Link>
             </span>
           </p>
         </div>
       </div>
-      <HomeImag />
+     
     </div>
   );
 };
