@@ -71,53 +71,55 @@ const SignIn = () => {
   };
 
   return (
-    <div className="app_register">
-       <HomeImag />
-      <div className="app_register_form" >
-        <div className="app_register_form2 " style={{width:'50%', height:'55vh'}}>
-          <h1>Sign In</h1>  
-          <FormControl>
-            <form>
-              <FormLabel>Email</FormLabel>
-              <Input
-                type="email"
-                id="email"
-                style={{ border: "1px solid black " }}
-                name="email"
-                value={registerValue.email}
-                onChange={registerHandler}
-              />
-              <FormLabel>Password</FormLabel>
-              <Input
-                type="password"
-                id="current-password"
-                autoComplete="on"
-                style={{ border: "1px solid black " }}
-                name="password"
-                value={registerValue.password}
-                onChange={registerHandler}
-              />
-            </form>
-            {/* <h4>OR</h4>
-            <div className="googleButton">
-              <div id="signInDiv"></div>
-            </div> */}
-          </FormControl>
+    <div className="app_register" style={{fontSize:"1.3rem"}}>
+    <HomeImag />
+   <div className="app_register_form" >
+     <div className="app_register_form2 " style={{width:'50%', height:'55vh'}}>
+       <h1>Sign In</h1>  
+       <FormControl>
+         <form>
+           <FormLabel>Email</FormLabel>
+           <Input
+             type="email"
+             id="email"
+             style={{ border: "1px solid black " }}
+             name="email"
+             value={registerValue.email}
+             onChange={registerHandler}
+           />
+           <FormLabel>Password</FormLabel>
+           <Input
+             type="password"
+             id="current-password"
+             autoComplete="on"
+             style={{ border: "1px solid black" ,fontSize:"1.5rem" }}
+             name="password"
+             value={registerValue.password}
+             onChange={registerHandler}
+           />
+         </form>
+         {/* <h4>OR</h4>
+         <div className="googleButton">
+           <div id="signInDiv"></div>
+         </div> */}
+       </FormControl>
 
-          <Button type="submit" colorScheme="blue" onClick={submitHandler}>
-            Submit
-          </Button>
-          <p>
-            Don&apos;t have an account?<br /> Please
-            
-            <span>
-              <Link to="/signup"> SignUp</Link>
-            </span>
-          </p>
-        </div>
-      </div>
-     
-    </div>
+       <Button type="submit" colorScheme="blue" onClick={submitHandler} 
+       style={{fontSize:'1.2rem'}}
+       >
+         Submit
+       </Button>
+       <p style={{paddingTop:'14px'}}>
+         Don&apos;t have an account?<br /> Please
+         <span>
+           <Link to="/signup"> SignUp</Link>
+         </span>
+       </p>
+     </div>
+   </div>
+  
+  
+ </div>
   );
 };
 
